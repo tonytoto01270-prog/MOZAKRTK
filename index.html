@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مُذاكرة — منصة تالتة ثانوي علمي علوم</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="rail">
+    <div class="brand">
+      <div class="mark">م</div>
+      <div><b>مُذاكرة</b><small>تالتة ثانوي — علمي علوم</small></div>
+    </div>
+    <nav class="nav" id="nav"></nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="search">
+        <span>🔎</span>
+        <input id="q" type="search" placeholder="دوّر على درس، قانون، سؤال، مدرّس…" autocomplete="off">
+      </div>
+      <button class="iconbtn" id="btnTimer" title="مؤقت المذاكرة">⏱️</button>
+      <button class="iconbtn" id="btnBell" title="الإشعارات">🔔<span class="dot" id="bellDot" hidden></span></button>
+      <button class="iconbtn" id="btnTheme" title="الوضع الليلي">🌙</button>
+    </header>
+    <main class="view" id="view"></main>
+  </div>
+</div>
+<nav class="tabbar" id="tabbar"></nav>
+<div id="layer"></div>
+<div id="authLayer"></div>
+
+<!-- ترتيب الملفات مهم: data ثم core ثم views ثم app -->
+<script src="assets/data.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/views.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
