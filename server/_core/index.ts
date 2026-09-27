@@ -7,7 +7,8 @@ import { registerStorageProxy } from "./storageProxy";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const ROOT = path.resolve(__dirname, "../..");
+const bundledRoot = path.resolve(__dirname, "..");
+const ROOT = fs.existsSync(path.join(bundledRoot, "client")) ? bundledRoot : path.resolve(__dirname, "../..");
 const PUBLIC_DIR = path.join(ROOT, "client", "public");
 const DATA_DIR = path.join(ROOT, "data");
 const DATA_FILE = path.join(DATA_DIR, "db.json");
